@@ -4,7 +4,7 @@ import streamlit as st
 
 async def send_data_to_prog2(data):
     async with aiohttp.ClientSession() as session:
-        async with session.post('http://localhost:8082/duplicate', json={'data': data}) as response:
+        async with session.post('http://10.12.146.237:8082/duplicate', json={'data': data}) as response:
             return await response.json()
 
 async def main():
