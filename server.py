@@ -11,10 +11,10 @@ async def main():
     app.router.add_post('/duplicate', duplicate_data)
     runner = web.AppRunner(app)
     await runner.setup()
-    site = web.TCPSite(runner, 'localhost', 8082)
+    site = web.TCPSite(runner, '10.12.146.237', 8082)
     await site.start()
 
-    print("Program 2 is running on http://localhost:8082")
+    print("Program 2 is running on http://10.12.146.237:8082")
 
     await asyncio.sleep(100*3600)  # Keeps the server running
 
